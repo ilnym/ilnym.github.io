@@ -1,0 +1,151 @@
+:root {
+  /*--circleSize: 9px;*/
+  --loaderSize: 70px;
+  --speed: 1.1s;
+}
+
+html, body {
+
+    /* color: #000;*/
+    color: white;
+   /*margin: 20px; /* append auto ?*/ */
+   /*padding: 10px; */
+    height: 100%;
+    font-size: 100%;
+    /*which is better*/
+    font-size: 13px;
+    font-family: 'DotGothic',serif;
+    margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer; /* Makes it clear it's clickable */
+}
+
+
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+.margin {
+    /* margin: 5%;*/
+    margin: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.container {
+    /*width: 740px !important;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    text-align: left;
+    display: flex;
+    /*justify-content: space-evenly;*/
+    align-items: center;
+}
+
+
+.grid-container {
+    display: grid;
+    /*grid-template-columns: 50px 1fr;*/  /* First column (date) is 150px, second (text) takes remaining space */
+    /*gap: 20px;*/ /* Adds space between columns */
+    /*max-width: 600px; */ /* Optional: Set a max-width for the container */
+    max-width: 600px;
+    /* margin: 20px; */ /* append auto ? Center the grid horizontally */
+    padding: 5px; /* Optional padding around the grid */
+    padding-block: 20px;
+}
+
+.image-container {
+    display: none; /* Initially hide the image */
+    overflow: hidden; /* Prevent image from overflowing */
+    max-height: 0; /* Set the max height to 0 for smooth unfolding */
+    transition: max-height 1s ease-out; /* Animate the unfolding effect */
+}
+
+.underline:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.content-photo {
+    /* background-color: white; */
+    width:100%; height:100%;
+    /* object-fit: cover; */
+    max-height: 0;
+    /* object-fit: scale-down;*/
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    /* max-width: 100%;*/  /* Optionally set a max width */
+    margin-top: 6.5px;
+    image-rendering: auto;
+}
+
+.content-text {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+}
+
+.image {
+    width:100%; height:auto;
+}
+
+
+.date {
+    /* font-size: 1.2rem; */
+    /* color: #333; */
+    color: white;
+    opacity: .5;
+}
+
+.background-container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*height: 100vh;*/ /* Make the container take up the full height of the viewport */
+    height: 100vh;
+    /* Background properties */
+    background-position: center;
+    background-image: url('Images/bg-space-crop.png'); /* Set the path to your image */
+    background-size: cover; /* Ensures the image scales to cover the entire container */
+    /* Keeps the image centered within the container */
+    /* background-repeat: no-repeat; */ /* Prevents the image from repeating */
+    background-attachment: fixed; /* Optional: Makes the background fixed when scrolling */
+    position: relative;
+    /* overflow: hidden; */
+    image-rendering: crisp-edges; /* For pixel art images, ensures no smoothing */
+}
+
+.red-text {
+    color: red;
+    /* font-family: 'DotGothic', sans-serif; */
+}
+
+.blue-text {
+    color: blue;
+}
+
+.yellow-text {
+    color: yellow;
+}
+
+@font-face {
+    font-family: 'DotGothic';
+    src: url('./Fonts/DotGothic16-Regular.ttf') format('truetype');        /* Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
